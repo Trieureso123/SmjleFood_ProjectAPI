@@ -1,0 +1,15 @@
+F:\SmjleFood\FFood-api\SmjleFood_ProjectAPI\SmjleFood_Project.Data\obj\Debug\net6.0\SmjleFood_Project.Data.csproj.AssemblyReference.cache
+F:\SmjleFood\FFood-api\SmjleFood_ProjectAPI\SmjleFood_Project.Data\obj\Debug\net6.0\SmjleFood_Project.Data.GeneratedMSBuildEditorConfig.editorconfig
+F:\SmjleFood\FFood-api\SmjleFood_ProjectAPI\SmjleFood_Project.Data\obj\Debug\net6.0\SmjleFood_Project.Data.AssemblyInfoInputs.cache
+F:\SmjleFood\FFood-api\SmjleFood_ProjectAPI\SmjleFood_Project.Data\obj\Debug\net6.0\SmjleFood_Project.Data.AssemblyInfo.cs
+F:\SmjleFood\FFood-api\SmjleFood_ProjectAPI\SmjleFood_Project.Data\obj\Debug\net6.0\SmjleFood_Project.Data.csproj.CoreCompileInputs.cache
+F:\SmjleFood\FFood-api\SmjleFood_ProjectAPI\SmjleFood_Project.Data\obj\Debug\net6.0\EFCoreSqlServerNetTopologySuite.cs
+F:\SmjleFood\FFood-api\SmjleFood_ProjectAPI\SmjleFood_Project.Data\bin\Debug\net6.0\SmjleFood_Project.Data.deps.json
+F:\SmjleFood\FFood-api\SmjleFood_ProjectAPI\SmjleFood_Project.Data\bin\Debug\net6.0\SmjleFood_Project.Data.runtimeconfig.json
+F:\SmjleFood\FFood-api\SmjleFood_ProjectAPI\SmjleFood_Project.Data\bin\Debug\net6.0\SmjleFood_Project.Data.dll
+F:\SmjleFood\FFood-api\SmjleFood_ProjectAPI\SmjleFood_Project.Data\bin\Debug\net6.0\SmjleFood_Project.Data.pdb
+F:\SmjleFood\FFood-api\SmjleFood_ProjectAPI\SmjleFood_Project.Data\obj\Debug\net6.0\SmjleFood_Project.Data.dll
+F:\SmjleFood\FFood-api\SmjleFood_ProjectAPI\SmjleFood_Project.Data\obj\Debug\net6.0\refint\SmjleFood_Project.Data.dll
+F:\SmjleFood\FFood-api\SmjleFood_ProjectAPI\SmjleFood_Project.Data\obj\Debug\net6.0\SmjleFood_Project.Data.pdb
+F:\SmjleFood\FFood-api\SmjleFood_ProjectAPI\SmjleFood_Project.Data\obj\Debug\net6.0\SmjleFood_Project.Data.genruntimeconfig.cache
+F:\SmjleFood\FFood-api\SmjleFood_ProjectAPI\SmjleFood_Project.Data\obj\Debug\net6.0\ref\SmjleFood_Project.Data.dll
