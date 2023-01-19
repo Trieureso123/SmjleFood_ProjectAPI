@@ -4900,6 +4900,7 @@
           "Microsoft.Data.SqlClient": "5.0.0",
           "Microsoft.Extensions.Caching.Abstractions": "6.0.0",
           "Microsoft.Extensions.Hosting.Abstractions": "6.0.0",
+          "Reso.Sdk": "1.0.13",
           "SmjleFood_Project.Data": "1.0.0",
           "StackExchange.Redis": "2.6.66",
           "System.Linq.Dynamic.Core": "1.2.20",
@@ -13076,6 +13077,7 @@
       "Microsoft.EntityFrameworkCore.Design >= 6.0.9",
       "Microsoft.EntityFrameworkCore.Proxies >= 6.0.9",
       "NetTopologySuite.Core >= 1.15.3",
+      "Reso.Sdk >= 1.0.13",
       "SmjleFood_Project.Data >= 1.0.0",
       "SmjleFood_Project.Service >= 1.0.0",
       "Stenn.EntityFrameworkCore.Extensions.DependencyInjection >= 6.0.0",
@@ -13199,6 +13201,10 @@
           "NetTopologySuite.Core": {
             "target": "Package",
             "version": "[1.15.3, )"
+          },
+          "Reso.Sdk": {
+            "target": "Package",
+            "version": "[1.0.13, )"
           },
           "Stenn.EntityFrameworkCore.Extensions.DependencyInjection": {
             "target": "Package",

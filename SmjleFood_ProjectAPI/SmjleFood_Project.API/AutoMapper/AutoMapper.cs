@@ -1,4 +1,7 @@
 ﻿using AutoMapper;
+using SmjleFood_Project.Data.Entity;
+using SmjleFood_Project.Service.DTO.Request;
+using SmjleFood_Project.Service.DTO.Response;
 
 namespace SmjleFood_Project.API.AutoMapper
 {
@@ -16,6 +19,9 @@ namespace SmjleFood_Project.API.AutoMapper
             #endregion
 
             #region Product
+            CreateMap<Product, ProductResponse>();
+            CreateMap<CreateProductRequest, Product>();
+            CreateMap<UpdateProductRequest, Product>();
             #endregion
 
             #region ProductInMenu
@@ -31,6 +37,7 @@ namespace SmjleFood_Project.API.AutoMapper
             #endregion
 
             #region TimeSlot
+            CreateMap<TimeSlot, TimeSlotResponse>().ReverseMap();  
             #endregion
 
             #region Collection

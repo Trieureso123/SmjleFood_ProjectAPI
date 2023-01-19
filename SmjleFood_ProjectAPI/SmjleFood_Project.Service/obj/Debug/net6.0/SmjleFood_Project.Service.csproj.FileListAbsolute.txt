@@ -1,0 +1,17 @@
+F:\SmjleFood\SmjleFood_ProjectAPI\SmjleFood_ProjectAPI\SmjleFood_Project.Service\bin\Debug\net6.0\SmjleFood_Project.Service.deps.json
+F:\SmjleFood\SmjleFood_ProjectAPI\SmjleFood_ProjectAPI\SmjleFood_Project.Service\bin\Debug\net6.0\SmjleFood_Project.Service.runtimeconfig.json
+F:\SmjleFood\SmjleFood_ProjectAPI\SmjleFood_ProjectAPI\SmjleFood_Project.Service\bin\Debug\net6.0\SmjleFood_Project.Service.dll
+F:\SmjleFood\SmjleFood_ProjectAPI\SmjleFood_ProjectAPI\SmjleFood_Project.Service\bin\Debug\net6.0\SmjleFood_Project.Service.pdb
+F:\SmjleFood\SmjleFood_ProjectAPI\SmjleFood_ProjectAPI\SmjleFood_Project.Service\bin\Debug\net6.0\SmjleFood_Project.Data.dll
+F:\SmjleFood\SmjleFood_ProjectAPI\SmjleFood_ProjectAPI\SmjleFood_Project.Service\bin\Debug\net6.0\SmjleFood_Project.Data.pdb
+F:\SmjleFood\SmjleFood_ProjectAPI\SmjleFood_ProjectAPI\SmjleFood_Project.Service\obj\Debug\net6.0\SmjleFood_Project.Service.csproj.AssemblyReference.cache
+F:\SmjleFood\SmjleFood_ProjectAPI\SmjleFood_ProjectAPI\SmjleFood_Project.Service\obj\Debug\net6.0\SmjleFood_Project.Service.GeneratedMSBuildEditorConfig.editorconfig
+F:\SmjleFood\SmjleFood_ProjectAPI\SmjleFood_ProjectAPI\SmjleFood_Project.Service\obj\Debug\net6.0\SmjleFood_Project.Service.AssemblyInfoInputs.cache
+F:\SmjleFood\SmjleFood_ProjectAPI\SmjleFood_ProjectAPI\SmjleFood_Project.Service\obj\Debug\net6.0\SmjleFood_Project.Service.AssemblyInfo.cs
+F:\SmjleFood\SmjleFood_ProjectAPI\SmjleFood_ProjectAPI\SmjleFood_Project.Service\obj\Debug\net6.0\SmjleFood_Project.Service.csproj.CoreCompileInputs.cache
+F:\SmjleFood\SmjleFood_ProjectAPI\SmjleFood_ProjectAPI\SmjleFood_Project.Service\obj\Debug\net6.0\SmjleFood_Project.Service.csproj.CopyComplete
+F:\SmjleFood\SmjleFood_ProjectAPI\SmjleFood_ProjectAPI\SmjleFood_Project.Service\obj\Debug\net6.0\SmjleFood_Project.Service.dll
+F:\SmjleFood\SmjleFood_ProjectAPI\SmjleFood_ProjectAPI\SmjleFood_Project.Service\obj\Debug\net6.0\refint\SmjleFood_Project.Service.dll
+F:\SmjleFood\SmjleFood_ProjectAPI\SmjleFood_ProjectAPI\SmjleFood_Project.Service\obj\Debug\net6.0\SmjleFood_Project.Service.pdb
+F:\SmjleFood\SmjleFood_ProjectAPI\SmjleFood_ProjectAPI\SmjleFood_Project.Service\obj\Debug\net6.0\SmjleFood_Project.Service.genruntimeconfig.cache
+F:\SmjleFood\SmjleFood_ProjectAPI\SmjleFood_ProjectAPI\SmjleFood_Project.Service\obj\Debug\net6.0\ref\SmjleFood_Project.Service.dll

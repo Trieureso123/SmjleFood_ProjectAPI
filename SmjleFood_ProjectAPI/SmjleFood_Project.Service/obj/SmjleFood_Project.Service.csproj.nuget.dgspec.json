@@ -225,6 +225,10 @@
               "target": "Package",
               "version": "[6.0.0, )"
             },
+            "Reso.Sdk": {
+              "target": "Package",
+              "version": "[1.0.13, )"
+            },
             "StackExchange.Redis": {
               "target": "Package",
               "version": "[2.6.66, )"

@@ -26,19 +26,21 @@
     </PackageReference>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="6.0.9" />
     <PackageReference Include="NetTopologySuite.Core" Version="1.15.3" />
+    <PackageReference Include="Reso.Sdk" Version="1.0.13" />
     <PackageReference Include="Stenn.EntityFrameworkCore.Extensions.DependencyInjection" Version="6.0.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
     <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.23.1" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-    <Folder Include="Helpers\" />
+    <ProjectReference Include="..\SmjleFood_Project.Data\SmjleFood_Project.Data.csproj" />
+    <ProjectReference Include="..\SmjleFood_Project.Service\SmjleFood_Project.Service.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\SmjleFood_Project.Data\SmjleFood_Project.Data.csproj" />
-    <ProjectReference Include="..\SmjleFood_Project.Service\SmjleFood_Project.Service.csproj" />
+    <Content Update="appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
 </Project>

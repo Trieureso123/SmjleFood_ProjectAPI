@@ -117,6 +117,10 @@
               "target": "Package",
               "version": "[1.15.3, )"
             },
+            "Reso.Sdk": {
+              "target": "Package",
+              "version": "[1.0.13, )"
+            },
             "Stenn.EntityFrameworkCore.Extensions.DependencyInjection": {
               "target": "Package",
               "version": "[6.0.0, )"
@@ -373,6 +377,10 @@
             "Microsoft.Extensions.Hosting.Abstractions": {
               "target": "Package",
               "version": "[6.0.0, )"
+            },
+            "Reso.Sdk": {
+              "target": "Package",
+              "version": "[1.0.13, )"
             },
             "StackExchange.Redis": {
               "target": "Package",

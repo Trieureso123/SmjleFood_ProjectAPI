@@ -10508,6 +10508,7 @@
       "Microsoft.Data.SqlClient >= 5.0.0",
       "Microsoft.Extensions.Caching.Abstractions >= 6.0.0",
       "Microsoft.Extensions.Hosting.Abstractions >= 6.0.0",
+      "Reso.Sdk >= 1.0.13",
       "SmjleFood_Project.Data >= 1.0.0",
       "StackExchange.Redis >= 2.6.66",
       "System.Linq.Dynamic.Core >= 1.2.20",
@@ -10609,6 +10610,10 @@
           "Microsoft.Extensions.Hosting.Abstractions": {
             "target": "Package",
             "version": "[6.0.0, )"
+          },
+          "Reso.Sdk": {
+            "target": "Package",
+            "version": "[1.0.13, )"
           },
           "StackExchange.Redis": {
             "target": "Package",

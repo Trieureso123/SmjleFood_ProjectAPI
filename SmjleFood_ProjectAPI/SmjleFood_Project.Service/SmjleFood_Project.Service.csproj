@@ -7,15 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Commons\" />
-    <Folder Include="DTO\" />
-    <Folder Include="Exceptions\" />
-    <Folder Include="Helpers\" />
-    <Folder Include="Utilities\" />
-    <Folder Include="Service\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.0" />
     <PackageReference Include="BarCode" Version="2023.1.11395" />
     <PackageReference Include="chilkat-x64" Version="9.5.0.93" />
@@ -29,6 +20,7 @@
     <PackageReference Include="Microsoft.Data.SqlClient" Version="5.0.0" />
     <PackageReference Include="Microsoft.Extensions.Caching.Abstractions" Version="6.0.0" />
     <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="6.0.0" />
+    <PackageReference Include="Reso.Sdk" Version="1.0.13" />
     <PackageReference Include="StackExchange.Redis" Version="2.6.66" />
     <PackageReference Include="System.Linq.Dynamic.Core" Version="1.2.20" />
   </ItemGroup>

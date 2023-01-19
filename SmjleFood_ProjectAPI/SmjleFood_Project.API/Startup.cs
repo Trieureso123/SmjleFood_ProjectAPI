@@ -9,146 +9,162 @@ using SmjleFood_Project.API.AutoMapper;
 using SmjleFood_Project.Data.Repository;
 using SmjleFood_Project.Data;
 using System.Text;
+using SmjleFood_Project.Data.MakeConnection;
+using SmjleFood_Project.Data.Context;
+using SmjleFood_Project.Data.Entity;
+using SmjleFood_Project.API.Helpers;
+using SmjleFood_Project.Service.Helpers;
+using SmjleFood_Project.Data.UnitOfWork;
+using SmjleFood_Project.Service.Service;
 
 namespace SmjleFood_Project.API
 {
-//    public class Startup
-//    {
-//        public Startup(IConfiguration configuration)
-//        {
+    public class Startup
+    {
+        public Startup(IConfiguration configuration)
+        {
+            Configuration = configuration;
+        }
 
-//        }
+        public IConfiguration Configuration { get; }
+        public static readonly string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
 
-//        public IConfiguration Configuration { get; }
-//        public static readonly string MyAllowSpecification = "_myAllowSpecificOrigins";
-
-//        // This method gets called by the runtime. Use this method to add services to the container.
-//#pragma warning disable CA1041 // Provide ObsoleteAttribute message
+        // This method gets called by the runtime. 
+        //Use this method to add services to the container.
+#pragma warning disable CA1041 // Provide ObsoleteAttribute message
         
-//        [Obsolete]
-//        /*
-//            Trong C#, Obsolote đánh dấu một thực thể chương trình mà 
-//        không nên được sử dụng. Nó cho bạn thông báo với trình biên dịch 
-//        để loại bỏ một phần tử target cụ thể. Ví dụ, khi một phương thức mới 
-//        đang được sử dụng trong một lớp và nếu bạn vẫn muốn giữ lại 
-//        phương thức cũ trong lớp này, bạn có thể đánh dấu nó là 
-//        obsolete (lỗi thời) bằng việc hiển thị một thông báo là 
-//        phương thức mới sẽ được sử dụng, thay cho phương thức cũ.
-         
-//         */
+        [Obsolete]
+        #region Knowledge
+        /*
+            Trong C#, Obsolote đánh dấu một thực thể chương trình mà 
+        không nên được sử dụng. Nó cho bạn thông báo với trình biên dịch 
+        để loại bỏ một phần tử target cụ thể. Ví dụ, khi một phương thức mới 
+        đang được sử dụng trong một lớp và nếu bạn vẫn muốn giữ lại 
+        phương thức cũ trong lớp này, bạn có thể đánh dấu nó là 
+        obsolete (lỗi thời) bằng việc hiển thị một thông báo là 
+        phương thức mới sẽ được sử dụng, thay cho phương thức cũ.
 
-//        public void ConfigureServices(IServiceCollection services)
-//        {
-//            services.AddAutoMapper(typeof(AutoMapperProfile).Assembly);
-//            services.AddCors(options =>
-//            {
-//                options.AddPolicy(MyAllowSpecificOrigins,
-//                    builder =>
-//                    {
-//                        builder
-//                        //.WithOrigins(GetDomain())
-//                        .AllowAnyOrigin()
-//                        .AllowAnyHeader()
-//                        .AllowAnyMethod();
-//                    });
-//            });
-//            services.AddControllersWithViews();
-//            services.AddControllers(options =>
-//            {
-//                options.Conventions.Add(new RouteTokenTransformerConvention(new SlugifyParameterTransformer()));
-//            });
-//            services.AddSwaggerGen(c =>
-//            {
-//                c.SwaggerDoc("v1", new OpenApiInfo
-//                {
-//                    Title = "FFPT Project API",
-//                    Version = "v1"
-//                });
-//                c.ResolveConflictingActions(apiDescriptions => apiDescriptions.First());
+         */
+        #endregion
 
-//                var securitySchema = new OpenApiSecurityScheme
-//                {
-//                    Description = "JWT Authorization header using the Bearer scheme. Example: \"Authorization: Bearer {token}\"",
-//                    Name = "Authorization",
-//                    In = ParameterLocation.Header,
-//                    Type = SecuritySchemeType.Http,
-//                    Scheme = "bearer",
-//                    Reference = new OpenApiReference
-//                    {
-//                        Type = ReferenceType.SecurityScheme,
-//                        Id = "Bearer"
-//                    }
-//                };
-//                c.AddSecurityDefinition("Bearer", securitySchema);
-//                c.AddSecurityRequirement(new OpenApiSecurityRequirement {
-//                {
-//                        securitySchema,
-//                    new string[] { "Bearer" }
-//                    }
-//                });
-//            });
-//            services.ConnectToConnectionString(Configuration);
+        public void ConfigureServices(IServiceCollection services)
+        {
+            services.AddAutoMapper(typeof(AutoMapperProfile).Assembly);
+            services.AddCors(options =>
+            {
+                options.AddPolicy(MyAllowSpecificOrigins,
+                    builder =>
+                    {
+                        builder
+                        ////.WithOrigins(GetDomain())
+                        .AllowAnyOrigin()
+                        .AllowAnyHeader()
+                        .AllowAnyMethod();
+                    });
+            });
+            services.AddControllersWithViews();
+            services.AddControllers(options =>
+            {
+                options.Conventions.Add(new RouteTokenTransformerConvention(new SlugifyParameterTransformer()));
+            });
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new OpenApiInfo
+                {
+                    Title = "SmjleFood Project API",
+                    Version = "v1"
+                });
+                c.ResolveConflictingActions(apiDescriptions => apiDescriptions.First());
 
-//            #region JWT
+                #region README
+                /*
+                 - README: https://topdev.vn/blog/json-web-token-la-gi/
+                 */
+                #endregion
 
-//            var appSettingsSection = Configuration.GetSection("AppSettings");
+                var securitySchema = new OpenApiSecurityScheme
+                {
+                    Description = "JWT Authorization header using the Bearer scheme. Example: \"Authorization: Bearer {token}\"",
+                    Name = "Authorization",
+                    In = ParameterLocation.Header,
+                    Type = SecuritySchemeType.Http,
+                    Scheme = "bearer",
+                    Reference = new OpenApiReference
+                    {
+                        Type = ReferenceType.SecurityScheme,
+                        Id = "Bearer"
+                    }
+                };
+                c.AddSecurityDefinition("Bearer", securitySchema);
+                c.AddSecurityRequirement(new OpenApiSecurityRequirement {
+                {
+                        securitySchema,
+                    new string[] { "Bearer" }
+                    }
+                });
+            });
+            services.ConnectToConnectionString(Configuration);
 
-//            services.Configure<AppSettings>(appSettingsSection);
-//            var appSettings = appSettingsSection.Get<AppSettings>();
+            #region JWT
 
-//            var key = Encoding.ASCII.GetBytes(appSettings.Secret);
-//            services.AddAuthentication(x =>
-//            {
-//                x.DefaultAuthenticateScheme = GoogleOpenIdConnectDefaults.AuthenticationScheme;
-//                x.DefaultChallengeScheme = GoogleOpenIdConnectDefaults.AuthenticationScheme;
-//            });
+            var appSettingsSection = Configuration.GetSection("AppSettings");
 
-//            #endregion JWT
+            services.Configure<AppSettings>(appSettingsSection);
+            var appSettings = appSettingsSection.Get<AppSettings>();
 
-//        }
+            var key = Encoding.ASCII.GetBytes(appSettings.Secret);
+            services.AddAuthentication(x =>
+            {
+                x.DefaultAuthenticateScheme = GoogleOpenIdConnectDefaults.AuthenticationScheme;
+                x.DefaultChallengeScheme = GoogleOpenIdConnectDefaults.AuthenticationScheme;
+            });
 
-//        public void ConfigureContainer(ContainerBuilder builder)
-//        {
-//            // Register your own things directly with Autofac, like:
+            #endregion JWT
 
-//            builder.RegisterType<UnitOfWork>().As<IUnitOfWork>();
+        }
 
-//            builder.RegisterType<CategoryService>().As<ICategoryService>();
-//            builder.RegisterType<CustomerService>().As<ICustomerService>();
-//            builder.RegisterType<MenuService>().As<IMenuService>();
-//            builder.RegisterType<OrderService>().As<IOrderService>();
-//            builder.RegisterType<ProductInMenuService>().As<IProductInMenuService>();
-//            builder.RegisterType<ProductServices>().As<IProductServices>();
-//            builder.RegisterType<SettingsService>().As<ISettingsService>();
+        public void ConfigureContainer(ContainerBuilder builder)
+        {
+            // Register your own things directly with Autofac, like:
 
-//            builder.RegisterGeneric(typeof(GenericRepository<>))
-//            .As(typeof(IGenericRepository<>))
-//            .InstancePerLifetimeScope();
-//        }
+            builder.RegisterType<UnitOfWork>().As<IUnitOfWork>();
 
-//        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-//        public void Configure(IApplicationBuilder app)
-//        {
-//            app.ConfigMigration<FFPT_ProjectDboContext>();
-//            app.UseCors(MyAllowSpecificOrigins);
-//            app.UseExceptionHandler("/error");
-//            app.UseHttpsRedirection();
-//            app.UseStaticFiles();
-//            app.UseSwagger();
-//            app.UseSwaggerUI(c =>
-//            {
-//                c.SwaggerEndpoint("/swagger/v1/swagger.json", "FFPT Api V1");
-//                c.DocExpansion(Swashbuckle.AspNetCore.SwaggerUI.DocExpansion.None);
-//            });
-//            app.UseRouting();
-//            app.UseAuthentication();
-//            app.UseAuthorization();
-//            app.UseDeveloperExceptionPage();
-//            app.UseEndpoints(endpoints =>
-//            {
-//                endpoints.MapControllers();
-//            });
-//        }
+            //builder.RegisterType<CategoryService>().As<ICategoryService>();
+            //builder.RegisterType<CustomerService>().As<ICustomerService>();
+            //builder.RegisterType<MenuService>().As<IMenuService>();
+            //builder.RegisterType<OrderService>().As<IOrderService>();
+            //builder.RegisterType<ProductInMenuService>().As<IProductInMenuService>();
+            builder.RegisterType<ProductService>().As<IProductService>();
+            builder.RegisterType<SettingService>().As<ISettingService>();
 
-//    }
+            builder.RegisterGeneric(typeof(GenericRepository<>))
+            .As(typeof(IGenericRepository<>))
+            .InstancePerLifetimeScope();
+        }
+
+        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+        public void Configure(IApplicationBuilder app)
+        {
+            app.ConfigMigration<SmjleFoodDBContext>();
+            app.UseCors(MyAllowSpecificOrigins);
+            app.UseExceptionHandler("/error");
+            app.UseHttpsRedirection();
+            app.UseStaticFiles();
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "SmjleFood Api V1");
+                c.DocExpansion(Swashbuckle.AspNetCore.SwaggerUI.DocExpansion.None);
+            });
+            app.UseRouting();
+            app.UseAuthentication();
+            app.UseAuthorization();
+            app.UseDeveloperExceptionPage();
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllers();
+            });
+        }
+
+    }
 }
