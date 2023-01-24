@@ -16,6 +16,7 @@ using SmjleFood_Project.API.Helpers;
 using SmjleFood_Project.Service.Helpers;
 using SmjleFood_Project.Data.UnitOfWork;
 using SmjleFood_Project.Service.Service;
+using SmjleFood_Project.API.DependencyInjection;
 
 namespace SmjleFood_Project.API
 {
@@ -123,23 +124,32 @@ namespace SmjleFood_Project.API
 
         }
 
+        #region Old ConfigureContainer Code
+        //public void ConfigureContainer(ContainerBuilder builder)
+        //{
+        //    // Register your own things directly with Autofac, like:
+
+        //    builder.RegisterType<UnitOfWork>().As<IUnitOfWork>();
+
+        //    //builder.RegisterType<CategoryService>().As<ICategoryService>();
+        //    //builder.RegisterType<CustomerService>().As<ICustomerService>();
+        //    //builder.RegisterType<MenuService>().As<IMenuService>();
+        //    //builder.RegisterType<OrderService>().As<IOrderService>();
+        //    //builder.RegisterType<ProductInMenuService>().As<IProductInMenuService>();
+        //    builder.RegisterType<StoreService>().As<IStoreService>();
+        //    builder.RegisterType<UserService>().As<IUserService>();
+        //    builder.RegisterType<ProductService>().As<IProductService>();
+        //    builder.RegisterType<SettingService>().As<ISettingService>();
+
+        //    builder.RegisterGeneric(typeof(GenericRepository<>))
+        //    .As(typeof(IGenericRepository<>))
+        //    .InstancePerLifetimeScope();
+        //}
+        #endregion
+
         public void ConfigureContainer(ContainerBuilder builder)
         {
-            // Register your own things directly with Autofac, like:
-
-            builder.RegisterType<UnitOfWork>().As<IUnitOfWork>();
-
-            //builder.RegisterType<CategoryService>().As<ICategoryService>();
-            //builder.RegisterType<CustomerService>().As<ICustomerService>();
-            //builder.RegisterType<MenuService>().As<IMenuService>();
-            //builder.RegisterType<OrderService>().As<IOrderService>();
-            //builder.RegisterType<ProductInMenuService>().As<IProductInMenuService>();
-            builder.RegisterType<ProductService>().As<IProductService>();
-            builder.RegisterType<SettingService>().As<ISettingService>();
-
-            builder.RegisterGeneric(typeof(GenericRepository<>))
-            .As(typeof(IGenericRepository<>))
-            .InstancePerLifetimeScope();
+            builder.DependencyInjection();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
