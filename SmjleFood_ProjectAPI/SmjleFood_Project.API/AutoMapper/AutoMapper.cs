@@ -13,15 +13,18 @@ namespace SmjleFood_Project.API.AutoMapper
             #endregion
 
             #region Store
+            CreateMap<Store, StoreResponse>();
+            CreateMap<CreateStoreRequest, Store>();
+            CreateMap<UpdateStoreRequest, Store>();
             #endregion
 
             #region Category
             #endregion
 
             #region Product
-            CreateMap<Product, ProductResponse>();
-            CreateMap<CreateProductRequest, Product>();
-            CreateMap<UpdateProductRequest, Product>();
+            //CreateMap<Product, ProductResponse>();
+            //CreateMap<CreateProductRequest, Product>();
+            //CreateMap<UpdateProductRequest, Product>();
             #endregion
 
             #region ProductInMenu
@@ -37,7 +40,7 @@ namespace SmjleFood_Project.API.AutoMapper
             #endregion
 
             #region TimeSlot
-            CreateMap<TimeSlot, TimeSlotResponse>().ReverseMap();  
+            //CreateMap<TimeSlot, TimeSlotResponse>().ReverseMap();
             #endregion
 
             #region Collection
@@ -61,23 +64,11 @@ namespace SmjleFood_Project.API.AutoMapper
             #region Shipper
             #endregion
 
-            //AdminAccount not have DB table yet
-            #region AdminAccount
+            #region User
+            //CreateMap<User, UserResponse>();   
+            //CreateMap<CreateUserRequest, User>();
+            //CreateMap<UpdateUserRequest, User>();
             #endregion
-
-            #region Area
-            #endregion
-
-            #region Floor
-            #endregion
-
-            #region Room
-            #endregion
-
-
-
-
-
         }
     }
 }

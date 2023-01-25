@@ -18,11 +18,10 @@ namespace SmjleFood_Project.API.DependencyInjection
             //builder.RegisterType<MenuService>().As<IMenuService>();
             //builder.RegisterType<OrderService>().As<IOrderService>();
             //builder.RegisterType<ProductInMenuService>().As<IProductInMenuService>();
-
-            //builder.RegisterType<StoreService>().As<IStoreService>();
+            builder.RegisterType<StoreService>().As<IStoreService>();
             //builder.RegisterType<UserService>().As<IUserService>();
             //builder.RegisterType<ProductService>().As<IProductService>();
-            //builder.RegisterType<SettingService>().As<ISettingService>();
+            builder.RegisterType<SettingService>().As<ISettingService>();
 
             builder.RegisterGeneric(typeof(GenericRepository<>))
             .As(typeof(IGenericRepository<>))
